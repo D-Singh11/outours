@@ -44,6 +44,17 @@ body {
   height: 40px;
 }
 
+/* this rule fixes the shaking issue of logo animation */
+/* .logo-box:hover .logo {
+  animation: moveInRight 1s ease-out;
+}
+
+/* this rule also fixes the flickering issue of animate logo by delaying the animation */
+/* .logo:hover {
+  animation: moveInRight 2s ease-out;
+  animation-delay: 1s;
+} */
+
 .text-box {
   position: absolute;
   top: 40%;

@@ -173,3 +173,19 @@ body {
   transform: scaleX(1.4) scaleY(2);
   opacity: 0;
 }
+
+.btn-animated {
+  animation: moveInBottom 1s ease-out 1s;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

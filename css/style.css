@@ -134,6 +134,13 @@ body {
   margin-top: 60px;
 }
 
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+
 .btn-white {
   background-color: #fff;
   color: #777;

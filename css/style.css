@@ -176,6 +176,7 @@ body {
 
 .btn-animated {
   animation: moveInBottom 1s ease-out 1s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInBottom {

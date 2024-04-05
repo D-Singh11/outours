@@ -41,35 +41,35 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative;
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 4rem;
-}
+  &__logo {
+    height: 4rem;
+  }
 
-/* this rule fixes the shaking issue of logo animation */
-/* .logo-box:hover .logo {
-  animation: moveInRight 1s ease-out;
-}
+  /* this rule fixes the shaking issue of logo animation */
+  /* .logo-box:hover .logo {
+    animation: moveInRight 1s ease-out;
+  }
+  
+  /* this rule also fixes the flickering issue of animate logo by delaying the animation */
+  /* .logo:hover {
+    animation: moveInRight 2s ease-out;
+    animation-delay: 1s;
+  } */
 
-/* this rule also fixes the flickering issue of animate logo by delaying the animation */
-/* .logo:hover {
-  animation: moveInRight 2s ease-out;
-  animation-delay: 1s;
-} */
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -77,29 +77,29 @@ body {
   text-transform: uppercase;
   /* Use following to stop shaking of primary heading during animation */
   backface-visibility: hidden;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
 
-  animation: moveInLeft 3s ease-out;
+    animation: moveInLeft 3s ease-out;
 
-  /* animation-iteration-count: 2; */
-  /* animation-delay: 2s; */
-}
+    /* animation-iteration-count: 2; */
+    /* animation-delay: 2s; */
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
 
-  animation-name: moveInRight;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+  }
 }
 
 @keyframes moveInLeft {
@@ -134,59 +134,62 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  margin-top: 6rem;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-size: 1.6rem;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    margin-top: 6rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
 
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-}
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba($color-primary-light, 0.2);
-}
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(2);
+      opacity: 0;
+    }
+  }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-primary-light, 0.2);
+  }
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 1s;
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
 
-.btn--white::after {
-  background-color: $color-white;
-}
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(2);
-  opacity: 0;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
 
-.btn--animated {
-  animation: moveInBottom 1s ease-out 1s;
-  animation-fill-mode: backwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s;
+  }
+
+  &--animated {
+    animation: moveInBottom 1s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
 }
 
 @keyframes moveInBottom {

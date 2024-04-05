@@ -2,6 +2,9 @@
   "name": "outours",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css"
+  },
   "author": "n/a",
   "license": "MIT",
   "private": false,

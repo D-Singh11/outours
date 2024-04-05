@@ -5,19 +5,27 @@ Medium green: #55c57a
 Dark green: #28b485
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+
+  box-sizing: border-box;
 }
 
 .header {
@@ -34,14 +42,14 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
-.logo {
-  height: 40px;
+.header__logo {
+  height: 4rem;
 }
 
 /* this rule fixes the shaking issue of logo animation */
@@ -55,7 +63,7 @@ body {
   animation-delay: 1s;
 } */
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -70,11 +78,11 @@ body {
   backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation: moveInLeft 3s ease-out;
 
@@ -82,11 +90,11 @@ body {
   /* animation-delay: 2s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.5px;
+  letter-spacing: 1.75rem;
 
   animation-name: moveInRight;
   animation-duration: 3s;
@@ -96,11 +104,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px) rotate(0deg);
+    transform: translateX(-10rem) rotate(0deg);
   }
 
   80% {
-    transform: translateX(50px);
+    transform: translateX(5rem);
   }
 
   100% {
@@ -112,11 +120,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-50px);
+    transform: translateX(-5rem);
   }
 
   100% {
@@ -129,24 +137,25 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  margin-top: 60px;
-  border-radius: 100px;
+  margin-top: 6rem;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(156, 147, 207, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(156, 147, 207, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -156,7 +165,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
 
   position: absolute;
   top: 0;
@@ -165,7 +174,7 @@ body {
   transition: all 1s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -174,7 +183,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 1s ease-out 1s;
   animation-fill-mode: backwards;
 }
@@ -182,11 +191,11 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(10rem);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0rem);
   }
 }

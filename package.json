@@ -1,0 +1,9 @@
+{
+  "name": "outours",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/D-Singh11/outours.git",
+  "author": "n/a",
+  "license": "MIT",
+  "private": false
+}

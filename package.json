@@ -5,5 +5,8 @@
   "repository": "https://github.com/D-Singh11/outours.git",
   "author": "n/a",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
 }

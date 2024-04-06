@@ -1,3 +1,31 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate(0deg); }
+  80% {
+    transform: translateX(5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(360deg); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+
 *,
 *::after,
 *::before {
@@ -9,43 +37,15 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(156, 147, 207, 0.8), rgba(93, 79, 185, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  position: relative;
-  /* this rule fixes the shaking issue of logo animation */
-  /* .logo-box:hover .logo {
-    animation: moveInRight 1s ease-out;
-  }
-  
-  /* this rule also fixes the flickering issue of animate logo by delaying the animation */
-  /* .logo:hover {
-    animation: moveInRight 2s ease-out;
-    animation-delay: 1s;
-  } */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 4rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -68,26 +68,6 @@ body {
     animation-name: moveInRight;
     animation-duration: 3s;
     animation-timing-function: ease-out; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem) rotate(0deg); }
-  80% {
-    transform: translateX(5rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0) rotate(360deg); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-5rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -133,10 +113,32 @@ body {
   animation: moveInBottom 1s ease-out 1s;
   animation-fill-mode: backwards; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(156, 147, 207, 0.8), rgba(93, 79, 185, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+  /* this rule fixes the shaking issue of logo animation */
+  /* .logo-box:hover .logo {
+      animation: moveInRight 1s ease-out;
+    }
+    
+    /* this rule also fixes the flickering issue of animate logo by delaying the animation */
+  /* .logo:hover {
+      animation: moveInRight 2s ease-out;
+      animation-delay: 1s;
+    } */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 4rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

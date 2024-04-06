@@ -8,50 +8,10 @@
 @import "base/utilities";
 
 @import "components/button";
+
+@import "layout/header";
+
 @import "pages/home";
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  position: relative;
-
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
-
-  &__logo {
-    height: 4rem;
-  }
-
-  /* this rule fixes the shaking issue of logo animation */
-  /* .logo-box:hover .logo {
-    animation: moveInRight 1s ease-out;
-  }
-  
-  /* this rule also fixes the flickering issue of animate logo by delaying the animation */
-  /* .logo:hover {
-    animation: moveInRight 2s ease-out;
-    animation-delay: 1s;
-  } */
-
-  &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-}
 
 .heading-primary {
   color: $color-white;

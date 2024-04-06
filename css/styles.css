@@ -147,6 +147,7 @@ body {
   max-width: 114rem;
   background-color: #5d4fb9cc;
   margin: 0 auto;
-  margin-bottom: 8rem;
   color: #fff;
   text-align: center; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }

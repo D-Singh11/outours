@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //defines what 1rem should be in the project assuming the default value of 1rem in the browsers is 16px
+  font-size: 62.5%; // equals to 10px, so so 1rem in the project is 10px
+}
+
+body {
+  box-sizing: border-box;
+}

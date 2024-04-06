@@ -7,16 +7,10 @@
 }
 
 html {
-  font-size: 62.5%;
+  //defines what 1rem should be in the project assuming the default value of 1rem in the browsers is 16px
+  font-size: 62.5%; // equals to 10px, so so 1rem in the project is 10px
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: $color-grey-dark;
-  padding: 3rem;
-
   box-sizing: border-box;
 }

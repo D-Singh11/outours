@@ -171,3 +171,7 @@ body {
     background-color: orangered; }
   .row .col-1-of-4 {
     width: calc((100% - (3 * 6rem)) / 4); }
+  .row .col-2-of-4 {
+    float: left;
+    width: calc( 2 * ((100% - (3 * 6rem)) / 4) + 6rem);
+    background-color: orangered; }

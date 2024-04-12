@@ -74,7 +74,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   background-image: linear-gradient(to right, #9c93cfcc, #5d4fb9cc);
-  display: inline-block; }
+  display: inline-block;
+  background-clip: text;
+  color: transparent; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;

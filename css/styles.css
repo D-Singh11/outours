@@ -76,7 +76,8 @@ body {
   background-image: linear-gradient(to right, #9c93cfcc, #5d4fb9cc);
   display: inline-block;
   background-clip: text;
-  color: transparent; }
+  color: transparent;
+  letter-spacing: 0.2rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;

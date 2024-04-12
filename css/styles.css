@@ -77,7 +77,11 @@ body {
   display: inline-block;
   background-clip: text;
   color: transparent;
-  letter-spacing: 0.2rem; }
+  letter-spacing: 0.2rem;
+  transition: all 0.5s; }
+  .heading-secondary:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;

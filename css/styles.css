@@ -83,6 +83,16 @@ body {
     transform: skewX(15deg) skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
@@ -165,9 +175,8 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #5d4fb9cc;
   margin: 0 auto;
-  color: #fff;
+  color: #777;
   text-align: center; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -176,7 +185,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }

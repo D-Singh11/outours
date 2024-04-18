@@ -182,8 +182,7 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  color: #777;
-  text-align: center; }
+  color: #777; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {

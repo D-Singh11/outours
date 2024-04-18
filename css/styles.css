@@ -149,6 +149,14 @@ body {
   animation: moveInBottom 1s ease-out 1s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  color: #5d4fb9cc;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-bottom: 1px solid #4d3eacc9;
+  padding: 0.3rem; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(156, 147, 207, 0.8), rgba(93, 79, 185, 0.8)), url("../img/hero.jpg");

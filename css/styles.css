@@ -155,7 +155,18 @@ body {
   font-size: 1.6rem;
   text-decoration: none;
   border-bottom: 1px solid #4d3eacc9;
-  padding: 0.3rem; }
+  padding: 0.3rem;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #4d3eacc9;
+  color: #f7f7f7;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.3);
+  transform: translateY(0); }
 
 .header {
   height: 95vh;
